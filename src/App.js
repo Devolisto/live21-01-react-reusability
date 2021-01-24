@@ -1,37 +1,38 @@
-import "./App.css";
+// import "./App.css";
+import InstructorTag from "./components/InstructorTag";
+import { ThemeProvider } from "styled-components";
 
 const App = () => {
+
+  const theme = {
+    mainBgColor: "#282c34",
+    fontColor: "#000"
+  }
   return (
-    <div className="AppWrapper">
+    <ThemeProvider theme={theme}>
       <h2>When in doubt, ask for help!</h2>
 
       <div
         className="TagWrapper"
         onClick={() => window.open(`https://github.com/DarthHamza`)}
       >
-        <span className="Emoji">🌚</span>
-        <span className="Name">Hamza</span>
-        <span className="GoToGithub">Go to GitHub</span>
+        <InstructorTag/>
       </div>
 
       <div
         className="TagWrapper"
         onClick={() => window.open(`https://github.com/Lailz`)}
       >
-        <span className="Emoji">🐥</span>
-        <span className="Name">Laila</span>
-        <span className="GoToGithub">Go to GitHub</span>
+        {/* <InstructorTag/> */}
       </div>
 
       <div
         className="TagWrapper"
         onClick={() => window.open(`https://github.com/thehasanas`)}
       >
-        <span className="Emoji">🦍</span>
-        <span className="Name">Hasan</span>
-        <span className="GoToGithub">Go to GitHub</span>
+        {/* <InstructorTag/> */}
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 
